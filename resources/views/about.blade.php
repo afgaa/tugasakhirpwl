@@ -32,7 +32,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href="" class="btn btn-primary mt-2 py-2 px-4">Daftar</a>
+                <a href="/reg" class="btn btn-primary mt-2 py-2 px-4">Daftar</a>
                 <br><br>
             </div>
 
@@ -53,7 +53,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href="" class="btn btn-primary mt-2 py-2 px-4">Daftar</a>
+                <a href="/reg" class="btn btn-primary mt-2 py-2 px-4">Daftar</a>
                 <br><br>
             </div>
 
@@ -73,7 +73,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href="" class="btn btn-primary mt-2 py-2 px-4">Daftar</a>
+                <a href="/reg" class="btn btn-primary mt-2 py-2 px-4">Daftar</a>
                 <br><br>
             </div>
 

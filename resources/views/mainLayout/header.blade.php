@@ -11,11 +11,19 @@
             <div class="navbar-nav font-weight-bold mx-auto py-0">
                 <a href="{{route('index')}}" class="nav-item nav-link @yield('index')">Home</a>
                 <a href="{{route('about')}}" class="nav-item nav-link @yield('about')">About</a>
-                <a href="{{route('class')}}" class="nav-item nav-link @yield('class')">Classes</a>
+                <a href="{{route('class')}}" class="nav-item nav-link @yield('class')">Class</a>
                 <a href="{{route('teacher')}}" class="nav-item nav-link @yield('teacher')">Teachers</a>
                 <a href="{{route('contact')}}" class="nav-item nav-link @yield('contact')">Contact</a>
             </div>
-            <a href="{{route('login')}}"  method="POST" class="btn btn-primary px-4">LOG IN</a>
+            <div class="dropdown show">
+                <a class="btn btn-secondary dropdown-toggle"  role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="{{route('login')}}">Admin</a>
+                    <a class="dropdown-item" href="/log">User</a>
+                </div>
+            </div>
         </div>
     </nav>
 </div>

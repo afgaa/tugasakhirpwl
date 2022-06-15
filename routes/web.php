@@ -27,6 +27,11 @@ Route::get('/log', function () {
     return view('login');
 });
 
+Route::get('/tampil', function () {
+    return view('tampil');
+});
+
+
 
 Route::POST('/registeruser', [RegisterController::class, 'store']);
 Route::POST('/loginuser', [Login_Controller::class, 'authenticate']);
