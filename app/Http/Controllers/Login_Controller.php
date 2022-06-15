@@ -22,14 +22,12 @@ class Login_Controller extends Controller
 
         $currentuser = Currentuser::where('email', $credentials['email'])->where('password', $credentials['password'])->first();
 
-        if (is_null($currentuser)){
+        if (is_null($currentuser)) {
             echo "login tidak aman";
-        }
-        else {
+        } else {
             echo "login aman";
-            
+            return redirect('/index');
         }
-        
     }
     public function logout(Request $request)
     {

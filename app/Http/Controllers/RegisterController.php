@@ -31,11 +31,10 @@ class RegisterController extends Controller
             'password' => 'required|min:5|max:255',
             'level' => 'required'
         ]);
-        $validatedData['password'] = Hash::make($validatedData['password']);
         Currentuser::create($validatedData);
 
         $request->session()->flash('success', 'Registrasi berhasil, silahkan login');
 
-        return redirect('/login');
+        return redirect('/log');
     }
 }
