@@ -45,8 +45,7 @@
 
                     <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
                     <div class="d-flex justify-content-between mb-2">
-                        <div class="mt-2"><a href="/registerAdmin">Register Admin</a></div>
-                        <div class="mt-2"><a href="/registerUser">Register User</a></div>
+                        <div class="mt-2"><a href="/reg">Register</a></div>
                     </div>
                 </form>
             </main>
