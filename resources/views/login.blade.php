@@ -24,7 +24,7 @@
 
         <div class="col-lg-4 shadow p-5 bg-light" id="register">
             <main class="form-signin">
-                <h2 class="h3 mb-3 fw-normal text-center text-muted">Please <strong>Login Moo!!</strong></h2>
+                <h2 class="h3 mb-3 fw-normal text-center text-muted">Please <strong>Login</strong></h2>
 
                 <div class="text-center m-3"><i class="bi bi-person-circle" style="font-size: 100px;"></i></div>
                 <form action="/loginuser" method="POST">
