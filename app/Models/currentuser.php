@@ -20,7 +20,7 @@ class currentuser extends Model
         'name',
         'email',
         'password',
-        'level',
+        'status',
     ];
 
     /**

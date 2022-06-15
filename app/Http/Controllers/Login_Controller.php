@@ -23,10 +23,18 @@ class Login_Controller extends Controller
         $currentuser = Currentuser::where('email', $credentials['email'])->where('password', $credentials['password'])->first();
 
         if (is_null($currentuser)) {
-            echo "login tidak aman";
+            $statuslogin = 0;
+            $message = "login gagal";
+            return view('infosukses', ['message' => $message, 'statuslogin' => $statuslogin]);
         } else {
-            echo "login aman";
-            return redirect('/index');
+            $statuslogin = 1;
+            if ($currentuser->status === "no verified") {
+                $message = "login sukses, namun akun anda belum diverifikasi";
+                return view('infosukses', ['message' => $message, 'statuslogin' => $statuslogin]);
+            } else {
+                $message = "login sukses, anda sudah diverifikasi";
+                return view('infosukses', ['message' => $message, 'statuslogin' => $statuslogin]);
+            }
         }
     }
     public function logout(Request $request)
