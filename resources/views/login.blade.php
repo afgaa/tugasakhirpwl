@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center mt-5 mb-5">
-
+        //info
         @if ($message = Session::get('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ $message }}
@@ -30,7 +30,8 @@
                 <form action="/loginuser" method="POST">
                     @csrf
                     <div class="form-group mb-2">
-                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="Masukkan Email" autofocus required value="{{ old('email') }}">
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
+                            id="email" placeholder="Masukkan Email" autofocus required value="{{ old('email') }}">
                         @error('email')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -38,7 +39,8 @@
                         @enderror
                     </div>
                     <div class="form-group mb-2">
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan Password" required>
+                        <input type="password" class="form-control" name="password" id="password"
+                            placeholder="Masukkan Password" required>
                     </div>
 
                     <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
@@ -51,22 +53,22 @@
         </div>
     </div>
 </div>
-        <div class="row align-items-center px-3">
-            <div class="col-lg-6 text-center text-lg-left">
-                <h1 class="display-3 font-weight-bold text-white text-center">Tempat Belajar</h1>
-                <br><br>
-                <p class="text-white mb-4">Ddisini kami menyediakan layanan belajar untuk anak anak 
-                    SD, SMP dan SMA/SMK supaya mereka bisa melakukan pembelajaran dirumah tidak hanya di sekolahan.
-                </p>
-                <p>
-                    .
-                </p>
-                    <br><br><br>
-                    <br><br><br>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <img class="img-fluid mt-7" src="{{asset ('assets/img/jti.png')}}">
-            </div>
-        </div>
+<div class="row align-items-center px-3">
+    <div class="col-lg-6 text-center text-lg-left">
+        <h1 class="display-3 font-weight-bold text-white text-center">Tempat Belajar</h1>
+        <br><br>
+        <p class="text-white mb-4">Ddisini kami menyediakan layanan belajar untuk anak anak
+            SD, SMP dan SMA/SMK supaya mereka bisa melakukan pembelajaran dirumah tidak hanya di sekolahan.
+        </p>
+        <p>
+            .
+        </p>
+        <br><br><br>
+        <br><br><br>
     </div>
+    <div class="col-lg-6 text-center text-lg-right">
+        <img class="img-fluid mt-7" src="{{asset ('assets/img/jti.png')}}">
+    </div>
+</div>
+</div>
 @endsection
