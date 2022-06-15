@@ -8,10 +8,11 @@
             <div class="text-center m-3"><i class="bi bi-person-circle" style="font-size: 100px;"></i></div>
             <form action="/registeruser" method="POST" enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" id="level" name="level" value="user">
+                <input type="hidden" id="status" name="status" value="no verified">
                 <div class="form-group">
                     <label for="name">Nama</label>
-                    <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Name" required value="{{ old('name') }}">
+                    <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name"
+                        placeholder="Name" required value="{{ old('name') }}">
                     @error('name')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -20,7 +21,8 @@
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="Masukkan Email" required value="{{ old('email') }}">
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
+                        id="email" placeholder="Masukkan Email" required value="{{ old('email') }}">
                     @error('email')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -28,17 +30,9 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <label for="level">Level</label>
-                    <input type="level" class="form-control @error('level') is-invalid @enderror" name="level" id="level" placeholder="Level" required value="{{ old('level') }}">
-                    @error('level')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                </div>
-                <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="Masukkan Password" required>
+                    <input type="password" class="form-control @error('password') is-invalid @enderror" name="password"
+                        id="password" placeholder="Masukkan Password" required>
                     @error('password')
                     <div class="invalid-feedback">
                         {{ $message }}

@@ -36,14 +36,14 @@ Route::get('/tampil', function () {
 Route::POST('/registeruser', [RegisterController::class, 'store']);
 Route::POST('/loginuser', [Login_Controller::class, 'authenticate']);
 
-Route::get('/index', [HomeController::class, 'index']) ->name('index');
-Route::get('/about', [HomeController::class, 'about']) ->name('about');
-Route::get('/class', [HomeController::class, 'class']) ->name('class');
-Route::get('/teacher', [HomeController::class, 'teacher']) ->name('teacher');
-Route::get('/galeri', [HomeController::class, 'galeri']) ->name('galeri');
-Route::get('/bloggrid', [HomeController::class, 'bloggrid']) ->name('bloggrid');
-Route::get('/single', [HomeController::class, 'single']) ->name('single');
-Route::get('/contact', [HomeController::class, 'contact']) ->name('contact');
+Route::get('/index', [HomeController::class, 'index'])->name('index');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/class', [HomeController::class, 'class'])->name('class');
+Route::get('/teacher', [HomeController::class, 'teacher'])->name('teacher');
+Route::get('/galeri', [HomeController::class, 'galeri'])->name('galeri');
+Route::get('/bloggrid', [HomeController::class, 'bloggrid'])->name('bloggrid');
+Route::get('/single', [HomeController::class, 'single'])->name('single');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 Auth::routes();
 
